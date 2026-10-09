@@ -1,0 +1,360 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Finance Entry Quiz</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            margin: 0;
+            padding: 30px 15px;
+            color: #1e293b;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            text-align: center;
+            color: #123c69;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 25px;
+        }
+
+        .instructions {
+            background: #e0f2fe;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .question {
+            border-bottom: 1px solid #e2e8f0;
+            padding: 18px 0;
+        }
+
+        .question p {
+            font-weight: bold;
+            line-height: 1.5;
+        }
+
+        .option {
+            display: block;
+            padding: 10px;
+            margin: 7px 0;
+            border: 1px solid #cbd5e1;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+        .option:hover {
+            background: #f0f9ff;
+        }
+
+        .option input {
+            margin-right: 8px;
+        }
+
+        button, .portfolio-link {
+            display: inline-block;
+            width: 100%;
+            padding: 14px;
+            margin-top: 20px;
+            background: #123c69;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        button:hover, .portfolio-link:hover {
+            background: #1d4ed8;
+        }
+
+        #result {
+            display: none;
+            margin-top: 25px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .passed {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .failed {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        #portfolioAccess {
+            display: none;
+        }
+
+        .small-text {
+            text-align: center;
+            color: #64748b;
+            font-size: 13px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Business Finance Quiz</h1>
+    <p class="subtitle">Portfolio Website Entry Assessment</p>
+
+    <div class="instructions">
+        <strong>Instructions:</strong>
+        Answer all five questions carefully. Each question is
+        worth 1 point. You must score at least <strong>4 out of 5
+        (80%)</strong> to proceed to the portfolio website.
+    </div>
+
+    <form id="quizForm">
+
+        <div class="question">
+            <p>1. Maria starts a frozen-food business with ₱5,000.
+            She spends ₱3,200 on inventory and ₱800 on packaging.
+            How much cash remains?</p>
+
+            <label class="option">
+                <input type="radio" name="q1" value="A"> A. ₱800
+            </label>
+            <label class="option">
+                <input type="radio" name="q1" value="B"> B. ₱1,000
+            </label>
+            <label class="option">
+                <input type="radio" name="q1" value="C"> C. ₱1,200
+            </label>
+            <label class="option">
+                <input type="radio" name="q1" value="D"> D. ₱1,800
+            </label>
+        </div>
+
+        <div class="question">
+            <p>2. A student sells products for ₱4,000.
+            The cost of the products sold is ₱2,500.
+            What is the gross profit before other expenses?</p>
+
+            <label class="option">
+                <input type="radio" name="q2" value="A"> A. ₱1,000
+            </label>
+            <label class="option">
+                <input type="radio" name="q2" value="B"> B. ₱1,500
+            </label>
+            <label class="option">
+                <input type="radio" name="q2" value="C"> C. ₱2,500
+            </label>
+            <label class="option">
+                <input type="radio" name="q2" value="D"> D. ₱6,500
+            </label>
+        </div>
+
+        <div class="question">
+            <p>3. A business records ₱10,000 in sales,
+            but customers have not yet paid ₱4,000.
+            Why might the business experience a cash shortage?</p>
+
+            <label class="option">
+                <input type="radio" name="q3" value="A">
+                A. Recorded sales always equal cash collected.
+            </label>
+            <label class="option">
+                <input type="radio" name="q3" value="B">
+                B. Unpaid balances erase all recorded sales.
+            </label>
+            <label class="option">
+                <input type="radio" name="q3" value="C">
+                C. Some sales have not yet converted into cash.
+            </label>
+            <label class="option">
+                <input type="radio" name="q3" value="D">
+                D. Cash shortages only happen when a business loses money.
+            </label>
+        </div>
+
+        <div class="question">
+            <p>4. Which is an example of working capital
+            used for day-to-day business operations?</p>
+
+            <label class="option">
+                <input type="radio" name="q4" value="A">
+                A. Cash for paying suppliers and operating bills
+            </label>
+            <label class="option">
+                <input type="radio" name="q4" value="B">
+                B. The owner's personal vacation budget
+            </label>
+            <label class="option">
+                <input type="radio" name="q4" value="C">
+                C. A plan to open a branch in five years
+            </label>
+            <label class="option">
+                <input type="radio" name="q4" value="D">
+                D. The design of the business logo
+            </label>
+        </div>
+
+        <div class="question">
+            <p>5. A student wants to buy a new freezer
+            for a frozen-food business. What should the
+            student do first?</p>
+
+            <label class="option">
+                <input type="radio" name="q5" value="A">
+                A. Buy the most expensive model
+            </label>
+            <label class="option">
+                <input type="radio" name="q5" value="B">
+                B. Borrow money without estimating repayments
+            </label>
+            <label class="option">
+                <input type="radio" name="q5" value="C">
+                C. Spend all available cash
+            </label>
+            <label class="option">
+                <input type="radio" name="q5" value="D">
+                D. Compare costs, expected benefits, and budget
+            </label>
+        </div>
+
+        <button type="submit">Submit My Answers</button>
+
+    </form>
+
+    <div id="result"></div>
+
+    <div id="portfolioAccess">
+        <a id="portfolioLink" class="portfolio-link"
+           href="#" target="_self">
+            Enter My Portfolio Website
+        </a>
+    </div>
+
+    <p class="small-text">
+        Business Finance | Student Learning Assessment
+    </p>
+
+</div>
+
+<script>
+    // CHANGE THIS to your actual portfolio website URL.
+    const PORTFOLIO_URL = "https://example.com";
+
+    const correctAnswers = {
+        q1: "B",
+        q2: "B",
+        q3: "C",
+        q4: "A",
+        q5: "D"
+    };
+
+    const quizForm = document.getElementById("quizForm");
+    const result = document.getElementById("result");
+    const portfolioAccess =
+        document.getElementById("portfolioAccess");
+    const portfolioLink =
+        document.getElementById("portfolioLink");
+
+    quizForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        let score = 0;
+        let unanswered = [];
+
+        // Check whether every question has an answer.
+        for (let question in correctAnswers) {
+            const selected = document.querySelector(
+                'input[name="' + question + '"]:checked'
+            );
+
+            if (!selected) {
+                unanswered.push(question);
+            } else if (selected.value === correctAnswers[question]) {
+                score++;
+            }
+        }
+
+        if (unanswered.length > 0) {
+            alert("Please answer all five questions before submitting.");
+            return;
+        }
+
+        const percentage = (score / 5) * 100;
+
+        result.style.display = "block";
+        portfolioAccess.style.display = "none";
+
+        if (score >= 4) {
+            result.className = "passed";
+            result.innerHTML =
+                "<h2>Congratulations!</h2>" +
+                "<p>You scored <strong>" + score + "/5 (" +
+                percentage + "%)</strong>.</p>" +
+                "<p>You passed the Business Finance quiz. " +
+                "You may now proceed to your portfolio.</p>";
+
+            portfolioLink.href = PORTFOLIO_URL;
+            portfolioAccess.style.display = "block";
+        } else {
+            result.className = "failed";
+            result.innerHTML =
+                "<h2>Keep Learning!</h2>" +
+                "<p>You scored <strong>" + score + "/5 (" +
+                percentage + "%)</strong>.</p>" +
+                "<p>You need at least 4 correct answers to pass. " +
+                "Review your Business Finance lessons and try again.</p>";
+
+            // Add a retake button.
+            const retakeButton = document.createElement("button");
+            retakeButton.textContent = "Retake Quiz";
+            retakeButton.type = "button";
+            retakeButton.onclick = function() {
+                quizForm.reset();
+                result.style.display = "none";
+                portfolioAccess.style.display = "none";
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            };
+
+            result.appendChild(retakeButton);
+        }
+
+        result.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+    });
+</script>
+
+</body>
+</html>
